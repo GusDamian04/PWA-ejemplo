@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera PWA</title>
+
+    <!-- Vincular el manifiest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- color de la bara de navegación en móviles -->
+    <meta name="theme-color" content="#2196f3">
+</head>
+<body>
+    <h1>Bienvenido a mi primera PWA 🐱‍💻</h1>
+    <p>Se puede instalar como aplicacion en tu celular 🐱‍👤</p>
+    <button 
+        onclick="alert('Hola desde la PWA')"
+    > Presiona aquí 🎁 </button>
+
+    <!-- Registrar el Sevice Worker -->
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('Service Worker registrado'))
+            .catch(err => console.log('Service Worker no registrado', err))
+        }
+    </script>
+</body>
+</html>
