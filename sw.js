@@ -1,5 +1,6 @@
 // Plantilla de Service Worker
 
+
 // 1. Nombre del caché y archivos a cachar
 const CACHE_NAME = "mi-pwa-cache-v1"
 const BASE_PATH = "PWA-ejemplo/"
